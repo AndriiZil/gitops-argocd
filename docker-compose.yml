@@ -1,0 +1,33 @@
+services:
+  backend:
+    image: andriizilnyk/backend-app:latest
+    container_name: backend-app
+    build:
+      context: ./project/backend-app
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: development
+      PORT: 4000
+    networks:
+      - app-net
+
+  frontend:
+    image: andriizilnyk/frontend-app:latest
+    container_name: frontend-app
+    build:
+      context: ./project/frontend-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      API_URL: http://backend-app:4000
+    depends_on:
+      - backend
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge

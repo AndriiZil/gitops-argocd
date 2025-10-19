@@ -75,3 +75,8 @@
   kubectl apply -f gitops/apps/frontend-app.yaml
   kubectl apply -f gitops/root-app.yaml
 ```
+
+```bash
+  kubectl rollout restart deployment backend
+  kubectl rollout restart deployment frontend
+```

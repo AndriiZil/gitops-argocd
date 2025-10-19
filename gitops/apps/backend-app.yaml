@@ -11,7 +11,7 @@ spec:
     path: project/backend-app/k8s
   destination:
     server: https://kubernetes.default.svc
-    namespace: backend
+    namespace: default
   syncPolicy:
     automated:
       prune: true

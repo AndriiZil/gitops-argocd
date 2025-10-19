@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: andriizilnyk/frontend-app:v1.0.1
+          image: andriizilnyk/frontend-app:v1.0.2
           ports:
             - containerPort: 3000

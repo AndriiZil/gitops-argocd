@@ -3,7 +3,8 @@
 const { createServer }  = require('node:http');
 
 const server = createServer((req, res) => {
-  console.info(`DATE: [${ new Date().toISOString() }] ${req.headers.host} ${req.method}`);
+  console.info(`DATE::: [${ new Date().toISOString() }] ${req.headers.host} ${req.method}`);
+
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('Hello World!\n');
 });

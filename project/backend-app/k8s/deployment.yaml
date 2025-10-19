@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: backend
-          image: andriizilnyk/backend-app:v1.0.1
+          image: andriizilnyk/backend-app:v1.0.2
           ports:
             - containerPort: 4000
